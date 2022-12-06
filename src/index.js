@@ -12,6 +12,12 @@ root.render(
     <div className="App">
       <h1>Weather App</h1>
       <WeatherSearch />
+      <p>
+        <a href="https://github.com/thatblondecodergirl/weather-react">
+          Open-Source Code
+        </a>{" "}
+        by Madeleine Alexandersson{" "}
+      </p>
     </div>
   </StrictMode>
 );
