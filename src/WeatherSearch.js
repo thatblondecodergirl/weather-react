@@ -11,6 +11,7 @@ export default function WeatherSearch() {
     setWeather({
       temperature: response.data.main.temp,
       wind: response.data.wind.speed,
+      date: new Date(response.data.dt * 1000),
       humidity: response.data.main.humidity,
       icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
       description: response.data.weather[0].description,
@@ -31,7 +32,9 @@ export default function WeatherSearch() {
   let form = (
     <form onSubmit={handleSubmit}>
       <input type="search" placeholder="Enter a city.." onChange={updateCity} />
-      <button type="Submit">Search</button>
+      <button type="Submit" className="btn btn-primary">
+        Search
+      </button>
     </form>
   );
 
@@ -40,6 +43,7 @@ export default function WeatherSearch() {
       <div>
         {form}
         <ul>
+          <li>{weather.date.getDay()}</li>
           <li>Temperature: {Math.round(weather.temperature)}°C</li>
           <li>Description: {weather.description}</li>
           <li>Humidity: {weather.humidity}%</li>

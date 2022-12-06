@@ -11,21 +11,21 @@ const root = createRoot(rootElement);
 root.render(
   <StrictMode>
     <div className="App">
-      <div className="container">
+      <div className="container Search">
         <h1>Weather App</h1>
         <WeatherSearch />
-        <footer>
-          <p>
-            <a
-              href="https://github.com/thatblondecodergirl/weather-react"
-              target="_blank"
-            >
-              Open-Source Code
-            </a>{" "}
-            by Madeleine Alexandersson{" "}
-          </p>
-        </footer>
       </div>
+      <footer>
+        <p>
+          <a
+            href="https://github.com/thatblondecodergirl/weather-react"
+            target="_blank"
+          >
+            Open-Source Code
+          </a>{" "}
+          by Madeleine Alexandersson{" "}
+        </p>
+      </footer>
     </div>
   </StrictMode>
 );
